@@ -51,7 +51,6 @@ public class DefaultLogFormatter: LogFormatter {
     /// Creates a new default log formatter.
     public init() { }
 
-    /// - See: `LogFormatter.format(type:message:file:function:line:)`
     public func format(type: OSLogType, message: String, file: StaticString, function: StaticString, line: UInt) -> String {
         let filename = (file.description as NSString).lastPathComponent
         return "[\(type)] (\(filename):\(line)) \(message)"

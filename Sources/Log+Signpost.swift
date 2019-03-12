@@ -28,26 +28,68 @@ import os.signpost
 
 extension Log {
 
+    /**
+     Creates a signpost ID that is unique among signposts logging to this log object.
+
+     - Returns: a signpost ID that is unique among signposts logging to this log object
+     - Requires: iOS 12 or later.
+     */
     @available(iOS 12.0, *)
     public func createSignpostID() -> OSSignpostID {
         return OSSignpostID(log: osLog)
     }
 
+    /**
+     Marks a point of interest in your code as a time interval or as an event for debugging performance in Instruments.
+
+     - Parameters:
+         - type: indicates the role of this signpost
+         - name: the name of this signpost
+     - Requires: iOS 12 or later.
+     */
     @available(iOS 12.0, *)
     public func signpost(_ type: OSSignpostType, name: StaticString) {
         os_signpost(type, log: osLog, name: name)
     }
 
+    /**
+     Marks a point of interest in your code as a time interval or as an event for debugging performance in Instruments.
+
+     - Parameters:
+         - type: indicates the role of this signpost
+         - name: the name of this signpost
+         - message: a message to associate with this signpost
+     - Requires: iOS 12 or later.
+     */
     @available(iOS 12.0, *)
     public func signpost(_ type: OSSignpostType, name: StaticString, _ message: String) {
         os_signpost(type, log: osLog, name: name, "%{public}s", message)
     }
 
+    /**
+     Marks a point of interest in your code as a time interval or as an event for debugging performance in Instruments.
+
+     - Parameters:
+         - type: indicates the role of this signpost
+         - name: the name of this signpost
+         - signpostID: an identifier for this signpost
+     - Requires: iOS 12 or later.
+     */
     @available(iOS 12.0, *)
     public func signpost(_ type: OSSignpostType, name: StaticString, signpostID: OSSignpostID) {
         os_signpost(type, log: osLog, name: name, signpostID: signpostID)
     }
 
+    /**
+     Marks a point of interest in your code as a time interval or as an event for debugging performance in Instruments.
+
+     - Parameters:
+        - type: indicates the role of this signpost
+        - name: the name of this signpost
+        - signpostID: an identifier for this signpost
+        - message: a message to associate with this signpost
+     - Requires: iOS 12 or later.
+     */
     @available(iOS 12.0, *)
     public func signpost(_ type: OSSignpostType, name: StaticString, signpostID: OSSignpostID, _ message: String) {
         os_signpost(type, log: osLog, name: name, signpostID: signpostID, "%{public}s", message)
