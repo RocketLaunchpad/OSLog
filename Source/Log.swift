@@ -167,32 +167,67 @@ extension Log {
 
 extension Log {
 
-    /// Sends a default-level message to the default log object.
-    /// - SeeAlso: `Log.msg(_:file:function:line:)`
+    /**
+     Sends a default-level message using the default log object.
+
+     - Parameters:
+        - message: The message to log.
+        - file: The current filename (default `#file`). Generally, the default value should be used.
+        - function: The current function name (default `#function`). Generally, the default value should be used.
+        - line: The current line number (default `#line`). Generally, the default value should be used.
+     */
     public static func msg(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
         Log.default.msg(message, file: file, function: function, line: line)
     }
 
-    /// Sends an info-level message to the default log object.
-    /// - SeeAlso: `Log.info(_:file:function:line:)`
+    /**
+     Sends an info-level message using the default log object.
+
+     - Parameters:
+         - message: The message to log.
+         - file: The current filename (default `#file`). Generally, the default value should be used.
+         - function: The current function name (default `#function`). Generally, the default value should be used.
+         - line: The current line number (default `#line`). Generally, the default value should be used.
+     */
     public static func info(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
         Log.default.info(message, file: file, function: function, line: line)
     }
 
-    /// Sends a debug-level message to the default log object.
-    /// - SeeAlso: `Log.debug(_:file:function:line)`
+    /**
+     Sends a debug-level message using the default log object.
+
+     - Parameters:
+         - message: The message to log.
+         - file: The current filename (default `#file`). Generally, the default value should be used.
+         - function: The current function name (default `#function`). Generally, the default value should be used.
+         - line: The current line number (default `#line`). Generally, the default value should be used.
+     */
     public static func debug(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
         Log.default.debug(message, file: file, function: function, line: line)
     }
 
-    /// Sends an error-level message to the default log object.
-    /// - SeeAlso: `Log.error(_:file:function:line)`
+    /**
+     Sends an error-level message using the default log object.
+
+     - Parameters:
+         - message: The message to log.
+         - file: The current filename (default `#file`). Generally, the default value should be used.
+         - function: The current function name (default `#function`). Generally, the default value should be used.
+         - line: The current line number (default `#line`). Generally, the default value should be used.
+     */
     public static func error(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
         Log.default.error(message, file: file, function: function, line: line)
     }
 
-    /// Sends a fault-level message to the default log object.
-    /// - SeeAlso: `Log.fault(_:file:function:line)`
+    /**
+     Sends a fault-level message using the default log object.
+
+     - Parameters:
+         - message: The message to log.
+         - file: The current filename (default `#file`). Generally, the default value should be used.
+         - function: The current function name (default `#function`). Generally, the default value should be used.
+         - line: The current line number (default `#line`). Generally, the default value should be used.
+     */
     public static func fault(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
         Log.default.fault(message, file: file, function: function, line: line)
     }
