@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "OSLog"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.summary = "OSLog Logging Framework"
 
   s.description = <<-DESC
@@ -14,7 +14,7 @@ The OSLog framework provides convenience wrappers around the native OSLog facili
   s.license = "MIT"
 
   s.platform = :ios, "11.0"
-  s.swift_version = "4.2"
+  s.swift_version = "5.0"
 
   s.source_files = "Source/*.swift"
 end
