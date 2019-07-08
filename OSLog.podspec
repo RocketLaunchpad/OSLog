@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "OSLog"
-  s.version = "1.0.0"
+  s.version = "1.0.1"
   s.summary = "OSLog Logging Framework"
 
   s.description = <<-DESC
