@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "OSLog"
-  s.version = "0.9.1"
+  s.version = "1.0.0"
   s.summary = "OSLog Logging Framework"
 
   s.description = <<-DESC
@@ -10,7 +10,7 @@ The OSLog framework provides convenience wrappers around the native OSLog facili
 
   s.homepage = "https://github.com/rocketinsights/OSLog"
   s.author = "Rocket Insights"
-  s.source = { :git => "git@github.com:rocketinsights/OSLog.git", :tag => "#{s.version}" }
+  s.source = { :git => "https://github.com/rocketinsights/OSLog.git", :tag => "#{s.version}" }
   s.license = "MIT"
 
   s.platform = :ios, "11.0"
