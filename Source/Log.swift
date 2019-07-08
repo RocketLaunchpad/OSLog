@@ -99,7 +99,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public func msg(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        log(.default, message, file: file, function: function, line: line)
+        log(.default, message(), file: file, function: function, line: line)
     }
 
     /**
@@ -114,7 +114,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public func info(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        log(.info, message, file: file, function: function, line: line)
+        log(.info, message(), file: file, function: function, line: line)
     }
 
     /**
@@ -129,7 +129,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public func debug(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        log(.debug, message, file: file, function: function, line: line)
+        log(.debug, message(), file: file, function: function, line: line)
     }
 
     /**
@@ -144,7 +144,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public func error(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        log(.error, message, file: file, function: function, line: line)
+        log(.error, message(), file: file, function: function, line: line)
     }
 
     /**
@@ -159,7 +159,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public func fault(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        log(.fault, message, file: file, function: function, line: line)
+        log(.fault, message(), file: file, function: function, line: line)
     }
 }
 
@@ -177,7 +177,7 @@ extension Log {
         - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public static func msg(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        Log.default.msg(message, file: file, function: function, line: line)
+        Log.default.msg(message(), file: file, function: function, line: line)
     }
 
     /**
@@ -190,7 +190,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public static func info(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        Log.default.info(message, file: file, function: function, line: line)
+        Log.default.info(message(), file: file, function: function, line: line)
     }
 
     /**
@@ -203,7 +203,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public static func debug(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        Log.default.debug(message, file: file, function: function, line: line)
+        Log.default.debug(message(), file: file, function: function, line: line)
     }
 
     /**
@@ -216,7 +216,7 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public static func error(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        Log.default.error(message, file: file, function: function, line: line)
+        Log.default.error(message(), file: file, function: function, line: line)
     }
 
     /**
@@ -229,6 +229,6 @@ extension Log {
          - line: The current line number (default `#line`). Generally, the default value should be used.
      */
     public static func fault(_ message: @autoclosure () -> String, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) {
-        Log.default.fault(message, file: file, function: function, line: line)
+        Log.default.fault(message(), file: file, function: function, line: line)
     }
 }
