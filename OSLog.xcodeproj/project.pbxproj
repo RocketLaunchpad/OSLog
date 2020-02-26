@@ -60,6 +60,7 @@
 		C52BEA9921E11C8900D2F1A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52BEAA321E11D3100D2F1A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C53D890821E44F2500DF832D /* Log+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Categories.swift"; sourceTree = "<group>"; };
+		C7602752234CD8D800F62FDD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		C52BEA6C21E11BFE00D2F1A4 = {
 			isa = PBXGroup;
 			children = (
+				C7602752234CD8D800F62FDD /* Package.swift */,
 				C52BEA7821E11BFE00D2F1A4 /* Source */,
 				C52BEA9D21E11C9600D2F1A4 /* Example */,
 				C52BEA7721E11BFE00D2F1A4 /* Products */,
