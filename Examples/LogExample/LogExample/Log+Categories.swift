@@ -1,8 +1,8 @@
 //
-//  OSLog.h
-//  OSLog
+//  Log+Categories.swift
+//  LogExample
 //
-//  Copyright (c) 2019 Rocket Insights, Inc.
+//  Copyright (c) 2019-2020 Rocket Insights, Inc.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -23,10 +23,12 @@
 //  SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+import Foundation
+import OSLog
 
-//! Project version number for OSLog.
-FOUNDATION_EXPORT double OSLogVersionNumber;
+extension Log {
+    private static let subsystem = "com.rocketinsights.LogExample"
 
-//! Project version string for OSLog.
-FOUNDATION_EXPORT const unsigned char OSLogVersionString[];
+    static let app = Log(subsystem: subsystem, category: "app", isEnabled: true)
+    static let timing = Log(subsystem: subsystem, category: "timing", isEnabled: true)
+}
