@@ -34,6 +34,7 @@ let package = Package(
     ],
     products: [
         .library(name: "OSLog",
+                 type: .dynamic,
                  targets: ["OSLog"]),
     ],
     targets: [
